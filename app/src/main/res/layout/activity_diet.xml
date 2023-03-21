@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DietActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/labelDietName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Name:"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/tvDietName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="Set the name of the Diet"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:singleLine="true"
+            app:layout_constraintBottom_toBottomOf="@id/labelDietName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/labelDietName"
+            app:layout_constraintTop_toTopOf="@id/labelDietName" />
+
+
+        <TextView
+            android:id="@+id/tvBreakfast"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="#00BCD4"
+            android:text="Breakfast"
+            android:textAlignment="center"
+            android:textColor="#283593"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@id/tvDietName"
+            app:layout_constraintStart_toStartOf="@id/labelDietName"
+            app:layout_constraintTop_toBottomOf="@id/labelDietName" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBreakFast"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/tvBreakfast"
+            app:layout_constraintStart_toStartOf="@id/tvBreakfast"
+            app:layout_constraintTop_toBottomOf="@+id/tvBreakfast"
+            tools:listitem="@layout/item_food" />
+
+        <Button
+            android:id="@+id/btAddBreakfastFood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Add"
+            app:layout_constraintEnd_toEndOf="@id/tvDietName"
+            app:layout_constraintStart_toStartOf="@id/labelDietName"
+            app:layout_constraintTop_toBottomOf="@id/rvBreakFast" />
+
+        <TextView
+            android:id="@+id/tvLunch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="#00BCD4"
+            android:text="Lunch"
+            android:textAlignment="center"
+            android:textColor="#283593"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@id/tvDietName"
+            app:layout_constraintStart_toStartOf="@id/labelDietName"
+            app:layout_constraintTop_toBottomOf="@id/btAddBreakfastFood" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLunch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/tvLunch"
+            app:layout_constraintStart_toStartOf="@id/tvLunch"
+            app:layout_constraintTop_toBottomOf="@+id/tvLunch"
+            tools:listitem="@layout/item_food" />
+
+        <Button
+            android:id="@+id/btAddLunchFood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Add"
+            app:layout_constraintEnd_toEndOf="@id/tvDietName"
+            app:layout_constraintStart_toStartOf="@id/labelDietName"
+            app:layout_constraintTop_toBottomOf="@id/rvLunch" />
+
+
+        <TextView
+            android:id="@+id/tvEveningLunch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="#00BCD4"
+            android:text="Evening Lunch"
+            android:textAlignment="center"
+            android:textColor="#283593"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@id/tvDietName"
+            app:layout_constraintStart_toStartOf="@id/labelDietName"
+            app:layout_constraintTop_toBottomOf="@id/btAddLunchFood" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvEveningLunch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/tvEveningLunch"
+            app:layout_constraintStart_toStartOf="@id/tvEveningLunch"
+            app:layout_constraintTop_toBottomOf="@+id/tvEveningLunch"
+            tools:listitem="@layout/item_food" />
+
+        <Button
+            android:id="@+id/btAddEveningLunchFood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Add"
+            app:layout_constraintEnd_toEndOf="@id/tvDietName"
+            app:layout_constraintStart_toStartOf="@id/labelDietName"
+            app:layout_constraintTop_toBottomOf="@id/rvEveningLunch" />
+
+        <TextView
+            android:id="@+id/tvDinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="#00BCD4"
+            android:text="Dinner"
+            android:textAlignment="center"
+            android:textColor="#283593"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@id/tvDietName"
+            app:layout_constraintStart_toStartOf="@id/labelDietName"
+            app:layout_constraintTop_toBottomOf="@id/btAddEveningLunchFood" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/tvDinner"
+            app:layout_constraintStart_toStartOf="@id/tvDinner"
+            app:layout_constraintTop_toBottomOf="@+id/tvDinner"
+            tools:listitem="@layout/item_food" />
+
+        <Button
+            android:id="@+id/btAddDinnerFood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Add"
+            app:layout_constraintEnd_toEndOf="@id/tvDietName"
+            app:layout_constraintStart_toStartOf="@id/labelDietName"
+            app:layout_constraintTop_toBottomOf="@id/rvDinner" />
+
+
+        <Button
+            android:id="@+id/btSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00BCD4"
+            android:text="@string/save_dieta"
+            app:layout_constraintTop_toBottomOf="@id/btAddDinnerFood"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

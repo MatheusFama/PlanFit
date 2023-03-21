@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/iTraining"
+        android:icon="@drawable/baseline_sports_training"
+        android:title="@string/training"
+        />
+    <item
+        android:id="@+id/iDiet"
+        android:icon="@drawable/baseline_food_bank_diet"
+        android:title="@string/diet"
+        />
+</menu>
